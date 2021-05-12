@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;namehp&apos; in &apos;StudentsManagement.MainStudent.FindNameOfHP()&apos; to &apos;nameHp&apos;&#x0D;&#x0A;- Original project: &apos;BaiTapJava001&apos;&#x0D;&#x0A;- Original element: &apos;StudentsManagement.MainStudent.FindNameOfHP().namehp&apos;&#x0D;&#x0A;- Renamed element: &apos;namehp&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;namehp&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;StudentsManagement{MainStudent.java[MainStudent~FindNameOfHP@namehp!4145!4175!4152!4157!QString;!0!false" name="nameHp" references="true" stamp="1610692006937" version="1.0"/>
+</session>

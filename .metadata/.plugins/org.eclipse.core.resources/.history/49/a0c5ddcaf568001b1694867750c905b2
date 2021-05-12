@@ -1,0 +1,155 @@
+package Form;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Container;
+import java.awt.Font;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Vector;
+
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+import javax.swing.border.Border;
+import javax.swing.border.TitledBorder;
+
+import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.ResultSetMetaData;
+import com.mysql.jdbc.Statement;
+
+import Connection.ConnectMySQL;
+import ThongTin.DaiLy;
+
+public class GiaoDien extends JFrame implements ActionListener {
+
+	//private ArrayList<DaiLy> list;
+	
+	private Container c;		// getContentPane()
+	private JLabel TieuDeLabel;
+	private JButton DangNhapButton;
+	private JButton DangKyButton;
+	private JButton ExitButton;
+	private JLabel ThongBaoLabel;
+
+	public GiaoDien() {
+		
+		setTitle("CHƯƠNG TRÌNH QUẢN LÝ DOANH THU VÉ SỐ");
+		setBounds(350, 90, 800, 700);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		c = getContentPane();
+		c.setLayout(null);
+		
+		TieuDeLabel = new JLabel("CHƯƠNG TRÌNH QUẢN LÝ DOANH THU VÉ SỐ");
+		TieuDeLabel.setFont(new Font("Calibri", Font.PLAIN, 26));
+		TieuDeLabel.setBounds(150, 10, 500, 60);
+		c.add(TieuDeLabel);
+		
+		JPanel panel1 = new JPanel();
+		Border border1 = BorderFactory.createLineBorder(Color.red);
+		TitledBorder titledBorder1 = BorderFactory.createTitledBorder(border1, "..."); 
+		panel1.setBorder(titledBorder1);
+		panel1.setLayout(new BorderLayout());
+		
+		JPanel p11 = new JPanel();
+		panel1.add(p11, BorderLayout.WEST);
+		
+		JLabel jlb1 = new JLabel("Há»� vĂ  tĂªn");
+		p11.add(jlb1);
+		
+		JLabel jlb2 = new JLabel("QuĂª quĂ¡n");
+		p11.add(jlb2);
+		
+		JLabel jlb3 = new JLabel("Lá»›p");
+		p11.add(jlb3);
+		
+		
+		
+		Vector vData = null, vTitle = null;
+		String url = "jdbc:mysql://localhost:3306/quanlydoanhthuveso?useSSL=false";
+		String user = "root";
+		String password = "Pvb171717ml";
+
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection conn = (Connection) DriverManager.getConnection(url, user, password);
+			Statement stm = (Statement) conn.createStatement();
+			ResultSet rst = stm.executeQuery("SELECT * FROM doanh_thu");
+			ResultSetMetaData rstmeta = (ResultSetMetaData) rst.getMetaData();
+			int num_column = rstmeta.getColumnCount();
+
+			vTitle = new Vector(num_column);
+			for (int i = 1; i <= num_column; i++) {
+				vTitle.add(rstmeta.getColumnLabel(i));
+			}
+
+			vData = new Vector(10, 10);
+			while (rst.next()) {
+				Vector row = new Vector(num_column);
+				for (int i = 1; i <= num_column; i++)
+					row.add(rst.getString(i));
+				vData.add(row);
+			}
+			rst.close();
+			stm.close();
+			conn.close();
+
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+
+		JScrollPane tableResult = new JScrollPane(new JTable(vData, vTitle));
+		panel1.add(tableResult);
+		
+		setContentPane(tableResult);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		show();
+
+//		DangNhapButton = new JButton("Đăng nhập");
+//		DangNhapButton.setBounds(100, 600, 95, 25);
+//		DangNhapButton.addActionListener(this);
+//		c.add(DangNhapButton);
+//		
+//		DangKyButton = new JButton("Đăng ký");
+//		DangKyButton.setBounds(250, 600, 80, 25);
+//		DangKyButton.addActionListener(this);
+//		c.add(DangKyButton);
+//		
+//		ExitButton = new JButton("Thoát");
+//		ExitButton.setBounds(400, 600, 80, 25);
+//		ExitButton.addActionListener(this);
+//		c.add(ExitButton);
+//		
+		setVisible(true);
+	}
+	
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == DangNhapButton) {
+			new DangNhap();
+			
+		} 
+		else if (e.getSource() == DangKyButton) {
+			new DangKy();
+		}	
+		else if (e.getSource() == ExitButton) {
+			System.exit(0);
+		}
+	}
+	public static void main(String[] args) {
+		new GiaoDien();
+	}
+}

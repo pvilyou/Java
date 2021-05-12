@@ -1,0 +1,21 @@
+package Bai_003_JavaAWT;
+
+import java.awt.Button;
+import java.awt.Frame;
+
+public class ExAWT_001 extends Frame {
+	ExAWT_001() {
+		setTitle("Vi du 1 AWT trong java");
+		Button b = new Button("Click me");
+		b.setBounds(30, 30, 300, 300);
+		add(b);
+		setSize(300, 300);
+		setLayout(null);
+		setVisible(true);
+	}
+	
+	public static void main(String[] args) {
+		new ExAWT_001();
+	}
+
+}

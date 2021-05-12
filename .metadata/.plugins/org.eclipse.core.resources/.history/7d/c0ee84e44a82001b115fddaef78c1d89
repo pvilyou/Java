@@ -1,0 +1,55 @@
+import java.awt.Container;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
+public class testCombobox extends JFrame implements ActionListener {
+	
+	private Container c;
+	private JButton bt;
+	private JComboBox cb;
+	public testCombobox() {
+		setTitle("Test combobox");
+		setSize(430, 320);
+		setLocationRelativeTo(null);
+
+		c = getContentPane();
+		c.setLayout(null);
+		
+		String ngay[] = { "Ha Noi", "Vinh Phuc", "Da Nang", 
+                "TP. Ho Chi Minh", "Nha Trang" };
+ 
+		int ng[] = {1,2,3};
+		
+		
+		
+        cb = new JComboBox(ngay);
+        cb.setBounds(100, 50, 150, 20);
+        c.add(cb);
+		
+		bt = new JButton("reset");
+		bt.setBounds(100,100,100,100);
+		c.add(bt);
+		bt.addActionListener(this);
+		setVisible(true);
+		
+	}
+	
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == bt) {
+			
+			JOptionPane.showMessageDialog(this, cb.getSelectedItem().toString());
+		}
+	}
+	
+	
+	public static void main(String[] args) {
+		new testCombobox();
+	}
+	
+}

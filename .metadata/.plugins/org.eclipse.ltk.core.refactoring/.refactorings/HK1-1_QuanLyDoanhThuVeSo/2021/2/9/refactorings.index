@@ -1,0 +1,84 @@
+1613959951704	Rename local variable 'p1'
+1613959986065	Rename local variable 'border1'
+1613960024471	Rename local variable 'titledBorder1'
+1613960195206	Rename local variable 'cnP13'
+1613960273383	Rename local variable 'jbt1'
+1613960288054	Rename local variable 'jbt2'
+1613960296693	Rename local variable 'jbt4'
+1613960308534	Rename local variable 'jbt5'
+1613960325251	Rename local variable 'jbt6'
+1613960349441	Rename local variable 'cnP11'
+1613960406173	Rename local variable 'cnPanel11'
+1613960774001	Rename local variable 'p2'
+1613960787698	Rename local variable 'border2'
+1613960826748	Rename local variable 'titledBorder2'
+1613961704324	Rename field 'ngayChi'
+1613961732685	Rename field 'donGia'
+1613985650950	Delete element
+1613997760334	Delete element
+1613998821012	Delete element
+1613998835896	Delete elements
+1614002392732	Delete element
+1614002399629	Delete elements
+1614003077568	Delete element
+1614004865613	Move compilation unit
+1614004870815	Move compilation unit
+1614004900716	Move compilation unit
+1614004911984	Delete element
+1614005751274	Rename method 'ThemChiTieu'
+1614006123043	Rename local variable 'NgayChiLabel'
+1614006130639	Rename field 'NgayChiTextField'
+1614006140959	Rename local variable 'KhoanChiLabel'
+1614006149269	Rename field 'KhoanChiTextField'
+1614006194505	Rename local variable 'SoLuongLabel'
+1614006208027	Rename field 'SoLuongTextField'
+1614007732000	Rename local variable 'chucNangPanel'
+1614007850402	Rename local variable 'TieuDeLabel'
+1614007859961	Rename local variable 'NgayChiLabel'
+1614007870052	Rename local variable 'KhoanChiLabel'
+1614007886623	Rename field 'NgayChiTextField'
+1614007893668	Rename field 'KhoanChiTextField'
+1614007903225	Rename local variable 'SoLuongLabel'
+1614007909785	Rename field 'SoLuongTextField'
+1614007917844	Rename local variable 'DonGiaLabel'
+1614007924427	Rename field 'DonGiaTextField'
+1614007935972	Rename field 'ThemButton'
+1614007943533	Rename field 'ThongBaoLabel'
+1614007949566	Rename field 'DatLaiButton'
+1614007990497	Rename field 'NgayThuTextField'
+1614007995317	Rename field 'KhoanThuTextField'
+1614007999604	Rename field 'SoLuongTextField'
+1614008003618	Rename field 'DonGiaTextField'
+1614008008086	Rename field 'ThemButton'
+1614008012867	Rename field 'ThongBaoLabel'
+1614008017752	Rename field 'DatLaiButton'
+1614008026018	Rename local variable 'TieuDeLabel'
+1614008034080	Rename local variable 'NgayThuLabel'
+1614008039133	Rename local variable 'KhoanThuLabel'
+1614008046674	Rename local variable 'SoLuongLabel'
+1614008053227	Rename local variable 'DonGiaLabel'
+1614008083273	Rename field 'NgayTextField'
+1614008088214	Rename field 'TienChiTextField'
+1614008113384	Rename field 'DatLaiButton'
+1614008120228	Rename local variable 'TieuDeLabel'
+1614008140319	Rename local variable 'TienThuLabel'
+1614046282272	Delete element
+1614046610200	Delete element
+1614046615263	Delete element
+1614145673557	Rename method 'timKiem'
+1614145745369	Rename method 'truyVan'
+1614146032846	Rename method 'timKiem'
+1614225497766	Rename method 'capNhapDuLieu'
+1614227418067	Rename local variable 'pstm'
+1614227450100	Rename local variable 'pstm'
+1614228355871	Rename local variable 'pstm'
+1614259855374	Rename local variable 'thoatButton'
+1614269684245	Delete element
+1614271124049	Delete element
+1614395950795	Delete element
+1614395954651	Delete element
+1614396335309	Delete element
+1614396439511	Delete element
+1614396462148	Delete element
+1614396601182	Delete element
+1614396604559	Delete element

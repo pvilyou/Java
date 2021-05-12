@@ -1,0 +1,43 @@
+- Nạp chồng phương thức (overloading)
+	class Adder{  
+    		static int add(int a, int b){
+			return a+b;
+		}  
+		static int add(int a, int b, int c){	// vẫn là add nhưng có thể như này :v
+			return a+b+c;
+		}		
+    		static double add(double a, double b){	// và như này nữa :v
+			return a+b;
+		}  
+	}  
+
+	class TestOverloading{  	
+		public static void main(String[] args){  
+       			System.out.println(Adder.add(11,12));  
+			System.out.println(Adder.add(11,13,12)); 	// khi gọi có thể như này
+        		System.out.println(Adder.add(12.3,12.6));  	// nhớ truyền đúng kiểu của tham số
+    		}
+	} 
+
+- Ghi đè phương thức (overriding)
+	class Vehicle {
+  		void run() {			// tạo một phương thức
+       			System.out.println("Vehicle is running");
+    		}
+	}
+ 
+	public class Bike extends Vehicle {
+    		void run() {
+        		System.out.println("Bike is running safely");	// ghi đè một hành động khác lên phương thức run
+    		}
+ 
+    		public static void main(String args[]) {
+        		Bike obj = new Bike();
+        		obj.run();
+    		}
+	}
+
+	output: Bike is running safely
+
+
+

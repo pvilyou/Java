@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;jframe&apos; in &apos;frame.main(...)&apos; to &apos;sapXep&apos;&#x0D;&#x0A;- Original project: &apos;TestJava&apos;&#x0D;&#x0A;- Original element: &apos;frame.main(String[]).jframe&apos;&#x0D;&#x0A;- Renamed element: &apos;jframe&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;jframe&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;{frame.java[frame~main~\[QString;@jframe!158!186!165!170!QJFrame;!0!false" name="sapXep" references="true" stamp="1615641201886" version="1.0"/>
+</session>

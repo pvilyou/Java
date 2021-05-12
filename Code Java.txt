@@ -1,0 +1,297 @@
+// Note:
+	
+	System.out.println(); 
+		( ut + ctrl + space + space + enter ) or ( sout + ctrl + space ) or ( sysout + ctrl + space ) 
+	public static void main(String[] args) {}
+		( main + ctrl + space )
+
+	final : khai báo hằng số
+
+	break : kết thúc vòng lặp
+	continue : không thực hiện các lệnh ở dưới và kiểm tra tiếp điều kiện lặp (gặp continue thì coi như là đã chạy hết lần lặp đó rồi chạy lên kiểm tra điều kiện)
+
+	static: dùng chung
+	
+	this. : trong chỗ hiện tại (phương thức, lớp..)
+	tên_lớp.
+	super. : lớp cha (lớp kế thừa)
+	
+	khi truyền tham số cho float thì thêm f vào sau vd như 3.6f
+				double thì khỏi cần     vd như 3.6
+
+
+// Các phím tắt:
+	Ctrl + Shift + O: Tự động Import thư viện còn thiếu, tổ chức lại thứ tự thư viện và xóa các thư viện không dùng đến
+	Ctrl + Shift + M: Tự động thêm câu lênh cho các lỗi do nhập thiếu, phải đặt trỏ chuột bên trong câu lệnh lỗi
+	Ctrl + Shift + F: Định dạng lại đoạn code được bôi đen hoặc toàn bộ tệp nguồn, phím tắt này rất hữu ích khi dùng nó để định dạng lại các dòng code lộn xộn và chuẩn hóa nó
+	Alt + Shift + S --> R : Tạo Getters và Setters cho các trường của một lớp
+	Alt + Shift + S --> O : Tạo Constructor từ các trường có trong lớp đó
+	Alt + Shift + S --> C : Tạo Constructor từ SuperClass
+	Alt + Shift + S --> H : Tạo các phương thức hashCode() và equals()
+	Alt + Shift + S --> S : Tạo Method toString() từ các trường được chọn
+
+
+- Các loại chấm ( .X ) : tên_biến.X 
+
+	.length : độ dài của
+	
+	.equals() : phân biệt hoa thường
+		ex: System.out.println(myName.equals(characteristics));		// so sánh ký tự của 2 chuỗi, nếu giống nhau sẽ trả về true, khác trả về false
+	.equalsInoreCase() : không phân biệt hoa thường
+
+	.toUpperCase(): viết hoa cả chuỗi
+	.toLowerCase(): viết thường cả chuỗi
+
+	.indexOf("W"): xem kí tự W đang ở vị trí số mấy (vị trí đếm theo mảng)
+	.charAt(5) : xem ở vị trí thứ 5 trong mảng chứa giá trị nào
+
+- this :
+	ex: 
+	public Student(String id) {
+		this.id = id;	// id trước là biến, id sau là tham số
+	}
+	public Student(String id, String name) {
+		this(id);	// có thể dùng như này, nó tự hiểu là cái this của Student(String id) phía trên
+				// tương đương với viết lại this.id = id;
+		this.name = name;
+	}
+	public Student(String id, String name, int age) {
+		this(id, name);	// có thể dùng như này, nó tự hiểu là cái this của Student(String id, String name) phía trên
+				// tương đương với viết lại this.id = id; this.name = name;
+		this.age = age;
+	}
+
+
+- Nhập dữ liệu:
+	int a;
+	String fullName;
+
+	Scanner scanner = new Scanner(System.in);
+	a = scanner.nextInt();		// nhập vào một giá trị kiểu int từ bàn phím
+	float b = scanner.nextFloat();	    // nhập vào một giá trị kiểu float từ bàn phím
+	fullName = scanner.next();	    // có thể nhập mọi thứ, nhưng chỉ lấy trước dâu phân cách gạch dưới. VD: Phan Van Bang, Trả về: Phan
+	fullName = scanner.nextLine();		// có thể nhập mọi thứ, lấy hết cả chuỗi. VD: Phan Van Bang, Trả về: Phan Van Bang
+	
+	// sửa lỗi không nhập được:
+		int n = key.nextInt();
+		key.nextLine();
+	or
+		int hp = Integer.parseInt(key.nextLine());
+
+
+- Java String và Xuất dữ liệu:
+
+	String myName = "Bang phan ";			// khởi tạo chuỗi myName và gán = "Bang phan"
+	String firstName = myName.substring(0, 4);	// khởi tạo chuỗi firstName và gán bằng phần tử từ thứ 0 đến trước phần tử thứ 4 của chuỗi myName
+	String lastName = myName.substring(5);		// khởi tạo chuỗi lastName và gán bằng phần tử từ 5 trở đi của chuỗi myName
+	int doDai = myName.length();			// khởi tạo biến doDai và gán bằng độ dài của chuỗi myName
+
+	System.out.println("Length of myName: " +doDai); 		// in ra màn hình 
+	System.out.println("Substring firstName: " +firstName); 
+	System.out.println("Substring lastName: " +lastName); 
+
+	String characteristics = "deep try ";
+	String result = myName + characteristics + ":v ";
+	System.out.println(result);			// sẽ in ra màn hình câu: Bang phan deep try :v
+
+	for(int i = 0; i < myName.lenght(); i++){
+		System.out.println(myName.charAt(i));	// in ra từng phần tử của chuỗi string myName
+	}
+
+
+- Hàm toán học:
+	Math.
+	// ex:	.max(a , b) 
+		.min(a , b)
+		.floor() :  làm tròn xuống
+		.ceil()  :  làm tròn lên
+		.round() :  làm tròn gần nhất
+
+
+- Toán tử 3 ngôi:
+	float max;
+	max = (a > b) ? a : b;
+
+
+- Mảng 1 chiều:
+	int[] number = {0, 1, 2, 3};
+	float[] diem = {1.2f, 3.2f, 9.9f};
+	String[] friends = {"Nam", "Hung", "Uy"};
+
+	int[] array = new int[100];	// cấp phát bộ nhớ
+
+
+- Mảng 2 chiều:
+	int[][] matix = { 
+	   {1, 2, 3},
+	   {4, 5, 6},
+	   {7, 8, 9}  
+	}
+	p/s: dùng vòng lặp lồng nhau để gọi
+
+
+- Vòng lặp:
+	for (i = 0; i < number.length; i++) {...}	: vòng lặp for
+	for (kiểu tên_biến : tập_hợp) {...}		: vòng lặp for - each
+
+	while (điều_kiện) {...}				: vòng lặp while
+	do {...						: vòng lặp do - while
+	} while( điều_kiện );
+
+
+- Biến của các tham số: Dùng khi cần truyền vào nhiều tham số nhưng không biết số chính xác số lượng tham số đó
+	
+	Cú pháp: access_modifuer type name(type ...args) {body}
+		ex: public static float addMultil(float ...args) {
+			float sum = 0;
+			for( float arg : args ) {	// chạy hết chiều dài của args
+				sum += arg;
+			}
+			return sum;
+		}
+
+	Gọi: name(danh sách tham số)
+		ex1: addMultil(1.2, 13, 5.6, 23, 4, 77, 9.3);
+		ex2: 
+			float[] arrf = {1.2f, 13, 5.6f, 23, 4, 77, 9.3f};		
+			addMultil(arrf);
+		p/s: chỉ được truyền vào một mảng, nhưng có thể truyền bao nhiêu tham số riêng tuỳ ý
+
+
+- Đọc dữ liệu từ file với Scanner:
+	ex:
+	public static void main(String[] args) throws FileNotFoundException {
+		File file = new File("input.txt");	// mở file có tên là input.txt
+		Scanner scanner = new Scanner(file);
+		String[] words = new String[100];
+	
+		int i = 0;
+		while (scanner.hasNext()) {
+			int w = scanner.nextInt();
+			numbers[i] = w;
+			words[i] = w;
+			i++;
+		}
+		showInfo(words);
+	}
+	private static void showInfo(String[] words) {
+		for (String word : words) {		// vòng lặp for - each (chạy đến hết độ dài của words)
+			if (word == null) {
+				break;
+			}
+			System.out.println(word);	
+		}
+	}
+
+
+- Phương thức (method) ((hàm)):  Thường sẽ ở bên trong một lớp
+	
+	Cú pháp: access_modifuer type name(params) {body}
+		ex: public static float VD(float a, int b) {
+			return 1.0*(a + b);
+		}
+	Gọi: name(danh sách tham số);
+		ex: VD(2.3, 5);
+
+
+- Lớp (Class) và Đối tượng (Object):
+	ex: Lớp Quả có các đối tượng: quả lê, quả táo, quả chanh,...
+	Các hành vi, thể hiện thông qua các phương thức của lớp
+	Các đặc điểm đặc trưng thể hiện qua thuộc tính của lớp
+
+
+- Tính đóng gói dữ liệu:	
+	Các thuộc tính thường để private
+	Các phương thức vận hành dựa tên các thuộc tính của lớp public
+
+	ex: Thay vì dùng:
+		public class Cat() {
+			public String name;
+			public int age;
+			public void setName() {
+				this.name = name;
+			}
+		}
+	    Thì ra dùng:
+		public class Cat() {
+			private String name;
+			private int age;
+			public void setName(String name) {
+				this.name = name;
+			}
+		}
+		// dùng như này sẽ bảo mật thông tin cho lớp
+
+	// khi dùng ở trong psv main thì
+		public static void main(String[] args) {
+			Cat tom = new Cat();
+			Cat meow = new Cat();
+
+			tom.setName("Tom");
+			//tom.setAge(3);
+		}
+			
+- Thành phần protected:
+	protected chỉ use trong kế thừa (extends)	
+	ex: protected int age;
+		thay vì private int age
+
+- Java Swing:
+	import javax.swing.JButton;		// cái nút
+	import javax.swing.JFrame;		// khung
+    ex:
+	public class ExSwing_001 {
+
+		public ExSwing_001() {
+			JFrame jf = new JFrame();	// tao the hien cho Jframe (khung)
+			jf.setTitle("Vail luon dau cat moi");	// tieu de
+				// or JFrame jf = new JFrame("Vail luon dau cat moi");
+		
+			JButton jb = new JButton("Tui ne");	// tao the hien cho JButton (cai nut)
+			jb.setBounds(100, 100, 80, 30);		// cai dat vi tri cho cai nut
+			
+			jf.add(jb);				// them cai nut vao khung
+		
+			jf.setSize(300, 300);			// kich thuoc khung voi width (rong) = 300 va height (dai) = 300 
+			jf.setLayout(null);			// khong bo tri
+			jf.setVisible(true);			// hien thi khung
+			jf.setLocationRelativeTo(null);			// cho cai hinh hien o giua man hinh
+			jf.setDefaultCloseOperation(jf.EXIT_ON_CLOSE);	// tat cua so thi dung chuong trinh
+		}
+		
+		public static void main(String[] args) {
+			new ExSwing_001();
+		}
+
+	}
+
+	/*
+	
+	.setTitle("Vail luon dau cat moi");	// tieu de
+	.setBounds(100, 100, 80, 30);		// cai dat vi tri cho cái nút
+	.setSize(300, 300);			// kich thuoc khung voi width (rong) = 300 va height (dai) = 300 
+	.setLayout(null);			// khong bo tri
+		.setLayout(new FlowLayout());	// bố trí ở trên cùng ở giữa
+	.setVisible(true);			// hien thi khung
+	.setLocationRelativeTo(null);		// cho cai hinh hien o giua man hinh
+	.setDefaultCloseOperation(jf.EXIT_ON_CLOSE);	// tat cua so thi dung chuong trinh
+	.pack();			// tạo khung vừa đủ với nút
+	.setActionCommand("ok");	// tạo một cái tên nhẹ nhàng cho cái nút đó
+	.addActionListener(this);	// tạo sự kiện
+	.setMnemonic(KeyEvent.VK_E);	// tạo phím tắt E cho sự kiện đó
+
+
+	*/
+
+
+
+
+
+
+
+
+
+
+
+
+

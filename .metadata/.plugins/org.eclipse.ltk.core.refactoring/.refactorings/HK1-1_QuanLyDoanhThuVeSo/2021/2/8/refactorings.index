@@ -1,0 +1,15 @@
+1613703040172	Rename local variable 'columnNames'
+1613703066482	Rename local variable 'temCot'
+1613822845733	Rename method 'tableClicker'
+1613822973285	Rename local variable 'index'
+1613825462042	Rename method 'xoaHang'
+1613875995974	Convert local variable 'mTableModel' to field
+1613890538402	Rename local variable 'mnBar'
+1613891957564	Delete element
+1613898201507	Rename local variable 'chucNang'
+1613898699561	Rename method 'updateDataTable'
+1613900606663	Rename local variable 'xoaChiTieu'
+1613900614407	Rename local variable 'suaChiTieu'
+1613901086476	Rename field 'tienChi'
+1613902105090	Rename method 'updateDataTable'
+1613902130953	Rename method 'updateDataTable'
